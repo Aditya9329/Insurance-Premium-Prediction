@@ -12,4 +12,23 @@ install the requirements
 pip install -r requirements.txt
 ```
 
+```bash
+    git init
+```
+
+```bash
+    dvc init
+```
+
+```bash
+dvc add data_given/insurance.csv
+```
+
+git commit -m "first commit"
+
+
+
+
+
+
 
