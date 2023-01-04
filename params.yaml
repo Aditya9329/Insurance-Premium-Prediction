@@ -1,0 +1,25 @@
+base:
+  project: insurance-premium-prediction
+  random_state: 42
+  target_col: expenses
+
+data_source:
+  s3_source: data_given/insurance.csv
+
+load_data:
+  raw_dataset_csv: data/raw/insurance.csv
+
+split_data:
+  train_path: data/processed_data/train_insurance.csv
+  test_path: data/processed_data/test_insurance.csv
+  test_size: 0.2
+
+estimators:
+  RandomForestRegressor:
+    params:
+      n_estimators: 100
+      max_depth: None
+      max_leaf_nodes: None
+
+model_dir: saved_models
+
