@@ -32,3 +32,20 @@ stages:
     - path: data/processed/train_insurance.csv
       md5: b8fb1aa85cc133ba7dc3df1ad2e403ff
       size: 41305
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py --config=params.yaml
+    deps:
+    - path: data/processed/test_insurance.csv
+      md5: 0ff4eceb04506d0ef4e97872ebc49802
+      size: 10374
+    - path: data/processed/train_insurance.csv
+      md5: b8fb1aa85cc133ba7dc3df1ad2e403ff
+      size: 41305
+    - path: src/train_and_evaluate.py
+      md5: cc9944a51129754f2bb8b2e13f1bc2cb
+      size: 2435
+    params:
+      params.yaml:
+        estimators.RandomForestRegressor.params.max_depth: 7
+        estimators.RandomForestRegressor.params.max_leaf_nodes: 2
+        estimators.RandomForestRegressor.params.n_estimators: 100
