@@ -27,6 +27,10 @@ dvc add data_given/insurance.csv
 git commit -m "first commit"
 
 
+check the metrics diff
+```bash
+dvc metrics diff
+```
 
 
 

@@ -46,16 +46,16 @@ stages:
       size: 3140
     params:
       params.yaml:
-        estimators.RandomForestRegressor.params.max_depth: 7
+        estimators.RandomForestRegressor.params.max_depth: 6
         estimators.RandomForestRegressor.params.max_leaf_nodes: 2
-        estimators.RandomForestRegressor.params.n_estimators: 100
+        estimators.RandomForestRegressor.params.n_estimators: 50
     outs:
     - path: reports/params.json
-      md5: 265b7cb5b5c399b75902c10c176d37d0
-      size: 76
+      md5: 204839253fe497cc2999d2087e610ffe
+      size: 75
     - path: reports/scores.json
-      md5: e4223570c502346bc34288cfe2d6af9d
+      md5: 93a186db64d32c473008baa42f317394
       size: 103
     - path: saved_models/model.joblib
-      md5: c4df38bdf7f87283222383c2290f7322
-      size: 50801
+      md5: b4dacf3937a4671afe6e7fc56ad62641
+      size: 26001
