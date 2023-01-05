@@ -53,9 +53,35 @@ def training_and_evaluation(config_path):
     print("Algorithm trained successfully")
     prediction_qualites = rf.predict(for_testing)
     (rmse,mae,r2) = eval_metrics(y_test,prediction_qualites)
-    print(rmse,mae,r2)
+    # print("RMSE:",rmse)
+    # print("MAE:",mae)
+    # print("r2-score:",r2)
+
+    scores_file = config["reports"]["scores"]
+    params_file = config["reports"]["params"]
+
+    with open(scores_file,"w") as f:
+        scores={
+            "rmse":rmse,
+            "mae":mae,
+            "r2-score":r2
+        }
+        json.dump(scores,f,indent=4)
 
 
+    with open(params_file,"w") as f:
+        params={
+            "n_estimators":n_estimators,
+            "max_depth":max_depth,
+            "max_leaf_nodes":max_leaf_nodes
+        }
+        json.dump(params,f,indent=4)
+
+
+
+    os.makedirs(model_dir, exist_ok=True)
+    model_path = os.path.join(model_dir, "model.joblib")
+    joblib.dump(rf, model_path)
 
 
 
