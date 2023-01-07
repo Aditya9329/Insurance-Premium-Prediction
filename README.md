@@ -32,7 +32,25 @@ check the metrics diff
 dvc metrics diff
 ```
 
+install django in conda enviroment
+```bash
+conda install -c anaconda django
+```
 
+create a django project 
+```bash 
+django-admin startproject webapp
+```
+
+create a application inside a webapp django project
+```bash
+python manage.py startapp Ipp(Insurance Premium Prediction)
+```
+
+run the application 
+```bash
+python manage.py runserver
+```
 
 
 
