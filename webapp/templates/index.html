@@ -23,10 +23,10 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Linkedin</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/aditya9329/">Linkedin</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Code</a>
+                <a class="nav-link" href="https://github.com/Aditya9329/Insurance-Premium-Prediction">Code</a>
               </li>
               
             </ul>
@@ -35,12 +35,21 @@
       </nav>
 
       <br>
+      <figure  style="width:80%;margin:auto;    background: aliceblue;">
+        <blockquote class="blockquote">
+          <p style="text-align:center;">The goal of this project is to give people an estimate of how much they need based on their individual health situation. This can assist a person in concentrating on the health side of an insurance policy rather than the ineffective part.</p>
+        </blockquote>
+        <br>
+        <figcaption class="blockquote-footer">
+          Insurance-Premium<cite title="Source Title">-Prediction.</cite>
+        </figcaption>
+      </figure>
 
 
-
+<br>
       <!-- <div class="d-flex justify-content-between"> -->
         <div class="d-flex justify-content-between" style="width:80%;margin:auto" >
-            <form class = "form-inline" role = "form" method="post">
+            <form class = "form-inline" style="width:50%;" role = "form" method="post">
               <div class="input-group input-group-sm mb-3">
                 {% csrf_token %}
                   <span class="input-group-text" id="inputGroup-sizing-sm">age</span>
@@ -75,13 +84,13 @@
                 <button type="submit" class="btn btn-dark">submit</button>
             </form>
 
-            <div>
+            {% comment %} <div>
                 <img src="https://media.istockphoto.com/id/1365534802/photo/artificial-intelligence-in-healthcare-new-ai-applications-in-medicine.jpg?b=1&s=170667a&w=0&k=20&c=eF-CGfuqSOwnbAeptvuK8qcdNE3-_RHIYk_II2T8g9Y=" class="img-fluid" alt="...">
-            </div>
-            <div>
+            </div> {% endcomment %}
+            <div id="output-box" style="height:100px;width:25%px;border-radius:3px;border:1px solid grey;">
                
-                <h1>Prediction-result:</h1>
-                <h1>{{val}}</h1>
+                <h1 style="font-family: cursive;;">Expenses prediction:</h1>
+                <h1>= {{val}}</h1>
               </div>
           </div>
 
